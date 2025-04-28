@@ -19,12 +19,14 @@
         <mule.version>4.9.0</mule.version>
         <mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 
-        <!-- Deployment Properties (Set securely via Jenkins or settings.xml) -->
+        <!-- Deployment Properties -->
         <env>dev</env>
         <appname>sam</appname>
         <business>MyBusinessGroup</business>
         <vCore>Micro</vCore>
         <workers>1</workers>
+
+        <!-- Securely injected via Jenkins or settings.xml -->
         <anypoint.client.id>${env.anypoint.client.id}</anypoint.client.id>
         <anypoint.client.secret>${env.anypoint.client.secret}</anypoint.client.secret>
     </properties>
@@ -115,4 +117,5 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
 </project>
